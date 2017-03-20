@@ -7,7 +7,7 @@ fi
 
 apt-get update && apt-get upgrade -y
 
-apt-get install -y vim mc screen htop bc sysstat samba samba-common-bin
+apt-get install -y vim mc screen htop bc sysstat samba samba-common-bin libav-tools
 
 
 # install
