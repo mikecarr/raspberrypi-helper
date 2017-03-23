@@ -17,7 +17,7 @@ https://outsideit.net/FireMotD/
 cd time-lapse
 ls *.jpg > stills.txt
 
-mencoder -nosound -ovc lavc -lavcopts vcodec=mpeg4:aspect=16/9:vbitrate=8000000 -o tlcam_01.avi -mf type=jpeg:fps=30 mf://@stills.txt
+avconv -r %s -i image%s.jpg -r %s -vcodec libx264 -crf 20 -g 15 -vf crop=2592:1458,scale=1280:720 timelapse.mp4"%(FPS_IN,'%7d',FPS_OUT
 ```
 
 timelapse2.py - http://trevorappleton.blogspot.co.uk/2013/11/creating-time-lapse-camera-with.html

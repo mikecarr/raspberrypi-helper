@@ -70,6 +70,7 @@ def main(captureTime=1.0, movieDuration=60, framerate=30, resolution=(1280,720),
         with picamera.PiCamera() as camera:
             print "Starting camera..."
             camera.resolution = resolution
+	    camera.rotation = 270
             if format == 'jpeg':
                 camera.quality = quality
             camera.start_preview()
